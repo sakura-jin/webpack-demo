@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "dist/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 2);
@@ -464,8 +464,8 @@ console.log(_methods2.default.add(10, 20));
 console.log(_methods2.default.mul(10, 30));
 document.writeln('<p>路鸣泽</p>');
 __webpack_require__(4);
-__webpack_require__(6);
 __webpack_require__(8);
+__webpack_require__(10);
 
 var str = '悼亡者之瞳';
 console.log(str);
@@ -518,40 +518,48 @@ if (content.locals) {
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
+// Imports
+var getUrl = __webpack_require__(6);
+var ___CSS_LOADER_URL___0___ = getUrl(__webpack_require__(7));
 // Module
-exports.push([module.i, "body{background: palegreen;}", ""]);
+exports.push([module.i, "body{background: url(" + ___CSS_LOADER_URL___0___ + ");}", ""]);
 
 
 /***/ }),
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var content = __webpack_require__(7);
+"use strict";
 
-if (typeof content === 'string') {
-  content = [[module.i, content, '']];
-}
 
-var options = {}
+module.exports = function (url, needQuotes) {
+  // eslint-disable-next-line no-underscore-dangle, no-param-reassign
+  url = url.__esModule ? url.default : url;
 
-options.insert = "head";
-options.singleton = false;
+  if (typeof url !== 'string') {
+    return url;
+  } // If url is already wrapped in quotes, remove them
 
-var update = __webpack_require__(1)(content, options);
 
-if (content.locals) {
-  module.exports = content.locals;
-}
+  if (/^['"].*['"]$/.test(url)) {
+    // eslint-disable-next-line no-param-reassign
+    url = url.slice(1, -1);
+  } // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
 
+
+  if (/["'() \t\n]/.test(url) || needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, '\\n'), "\"");
+  }
+
+  return url;
+};
 
 /***/ }),
 /* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(0)(false);
-// Module
-exports.push([module.i, "body{font-size:30px}\n", ""]);
-
+module.exports = __webpack_require__.p + "images/demo2119a9e33.jpg";
 
 /***/ }),
 /* 8 */
@@ -577,6 +585,37 @@ if (content.locals) {
 
 /***/ }),
 /* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, "body{font-size:30px}\n", ""]);
+
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(11);
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(1)(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+
+/***/ }),
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(false);
