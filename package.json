@@ -1,0 +1,19 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "sakura",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.0.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^3.6.0"
+  }
+}
