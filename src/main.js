@@ -9,3 +9,17 @@ require('./css/normal.less');
 
 const str='悼亡者之瞳';
 console.log(str);
+
+// vue
+import Vue from 'vue';
+import App from './App'
+
+let app=new Vue({
+    el:'#app',
+    template:'<App/>',
+    components:{
+        App
+    }
+
+})
+

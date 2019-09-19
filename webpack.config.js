@@ -1,4 +1,5 @@
 const path = require('path');
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 module.exports = {
     entry:"./src/main.js",
@@ -54,8 +55,22 @@ module.exports = {
                 }
               }
             ]
+          },
+          {
+            test: /\.vue$/,
+            loader: 'vue-loader'
           }
           
         ]
-      }
+    },
+    resolve: {
+        extensions: [".js", ".vue"],
+        alias: {
+          'vue$': 'vue/dist/vue.esm.js' // 用 webpack 1 时需用 'vue/dist/vue.common.js'
+        }
+    },
+    plugins: [
+      // 请确保引入这个插件！
+      new VueLoaderPlugin()
+    ]
 }
