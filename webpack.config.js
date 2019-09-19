@@ -31,6 +31,16 @@ module.exports = {
             }, {
                 loader: "less-loader" // compiles Less to CSS
             }]
+          },
+          {
+            test: /\.js$/,
+            exclude: /(node_modules|bower_components)/,
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: ['es2015']
+              }
+            }
           }
           
         ]

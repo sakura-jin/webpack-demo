@@ -6,3 +6,6 @@ document.writeln('<p>路鸣泽</p>');
 require('./css/normal.css');
 require('./css/normal.scss');
 require('./css/normal.less');
+
+const str='悼亡者之瞳';
+console.log(str);

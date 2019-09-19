@@ -449,35 +449,47 @@ module.exports = function (list, options) {
 
 /***/ }),
 /* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__js_methods__ = __webpack_require__(3);
 
 
-console.log(__WEBPACK_IMPORTED_MODULE_0__js_methods__["a" /* default */].add(10,20));
-console.log(__WEBPACK_IMPORTED_MODULE_0__js_methods__["a" /* default */].mul(10,30));
+var _methods = __webpack_require__(3);
+
+var _methods2 = _interopRequireDefault(_methods);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+console.log(_methods2.default.add(10, 20));
+console.log(_methods2.default.mul(10, 30));
 document.writeln('<p>路鸣泽</p>');
 __webpack_require__(4);
 __webpack_require__(6);
 __webpack_require__(8);
 
+var str = '悼亡者之瞳';
+console.log(str);
+
 /***/ }),
 /* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-function add(num1,num2){
-    return num1+num2;
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+function add(num1, num2) {
+    return num1 + num2;
 }
-function mul(num1,num2){
-    return num1*num2;
+function mul(num1, num2) {
+    return num1 * num2;
 }
 
-/* harmony default export */ __webpack_exports__["a"] = ({
-    add,mul
-});
+exports.default = {
+    add: add, mul: mul
+};
 
 /***/ }),
 /* 4 */
