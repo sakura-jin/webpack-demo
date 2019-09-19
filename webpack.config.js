@@ -21,7 +21,18 @@ module.exports = {
             }, {
                 loader: "sass-loader" // 将 Sass 编译成 CSS
             }]
+          },
+          {
+            test: /\.less$/,
+            use: [{
+                loader: "style-loader" // creates style nodes from JS strings
+            }, {
+                loader: "css-loader" // translates CSS into CommonJS
+            }, {
+                loader: "less-loader" // compiles Less to CSS
+            }]
           }
+          
         ]
       }
 }

@@ -5,3 +5,4 @@ console.log(methods.mul(10,30));
 document.writeln('<p>路鸣泽</p>');
 require('./css/normal.css');
 require('./css/normal.scss');
+require('./css/normal.less');

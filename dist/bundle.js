@@ -461,6 +461,7 @@ console.log(__WEBPACK_IMPORTED_MODULE_0__js_methods__["a" /* default */].mul(10,
 document.writeln('<p>路鸣泽</p>');
 __webpack_require__(4);
 __webpack_require__(6);
+__webpack_require__(8);
 
 /***/ }),
 /* 3 */
@@ -538,6 +539,37 @@ if (content.locals) {
 exports = module.exports = __webpack_require__(0)(false);
 // Module
 exports.push([module.i, "body{font-size:30px}\n", ""]);
+
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var content = __webpack_require__(9);
+
+if (typeof content === 'string') {
+  content = [[module.i, content, '']];
+}
+
+var options = {}
+
+options.insert = "head";
+options.singleton = false;
+
+var update = __webpack_require__(1)(content, options);
+
+if (content.locals) {
+  module.exports = content.locals;
+}
+
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(false);
+// Module
+exports.push([module.i, "body {\n  color: purple;\n}\n", ""]);
 
 
 /***/ })
