@@ -1,12 +1,15 @@
 const path = require('path');
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const webpack = require('webpack');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
     entry:"./src/main.js",
     output:{
         path:path.resolve(__dirname,'dist'),
         filename:'bundle.js',
-        publicPath:'dist/'
+        publicPath:''
     },
     module: {
         rules: [
@@ -71,6 +74,11 @@ module.exports = {
     },
     plugins: [
       // 请确保引入这个插件！
-      new VueLoaderPlugin()
+      new VueLoaderPlugin(),
+      new webpack.BannerPlugin("出自sakura"),
+      new HtmlWebpackPlugin({
+        template:'index.html'
+      }),
+      new UglifyJsPlugin()
     ]
 }
