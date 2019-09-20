@@ -1,0 +1,65 @@
+{
+  "id": "1426776",
+  "name": "demo",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "8106215",
+      "name": "child",
+      "font_class": "child",
+      "unicode": "e699",
+      "unicode_decimal": 59033
+    },
+    {
+      "icon_id": "8106217",
+      "name": "delete",
+      "font_class": "delete",
+      "unicode": "e69a",
+      "unicode_decimal": 59034
+    },
+    {
+      "icon_id": "8106225",
+      "name": "brightness",
+      "font_class": "brightness",
+      "unicode": "e698",
+      "unicode_decimal": 59032
+    },
+    {
+      "icon_id": "8106226",
+      "name": "musiclist",
+      "font_class": "musiclist",
+      "unicode": "e69c",
+      "unicode_decimal": 59036
+    },
+    {
+      "icon_id": "8106234",
+      "name": "agreement",
+      "font_class": "agreement",
+      "unicode": "e697",
+      "unicode_decimal": 59031
+    },
+    {
+      "icon_id": "8106236",
+      "name": "privacy2",
+      "font_class": "privacy",
+      "unicode": "e69d",
+      "unicode_decimal": 59037
+    },
+    {
+      "icon_id": "8106238",
+      "name": "brightness2",
+      "font_class": "brightness1",
+      "unicode": "e69b",
+      "unicode_decimal": 59035
+    },
+    {
+      "icon_id": "8106240",
+      "name": "conversation",
+      "font_class": "conversation",
+      "unicode": "e69e",
+      "unicode_decimal": 59038
+    }
+  ]
+}
