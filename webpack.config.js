@@ -80,5 +80,10 @@ module.exports = {
         template:'index.html'
       }),
       new UglifyJsPlugin()
-    ]
+    ],
+    devServer: {
+      contentBase: './dist',
+      inline:true,
+      port: 9000
+    }
 }
