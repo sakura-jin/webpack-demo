@@ -2,7 +2,6 @@ const path = require('path');
 const webpack = require('webpack');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
     entry:"./src/main.js",
@@ -79,11 +78,6 @@ module.exports = {
       new HtmlWebpackPlugin({
         template:'index.html'
       }),
-      new UglifyJsPlugin()
-    ],
-    devServer: {
-      contentBase: './dist',
-      inline:true,
-      port: 9000
-    }
+
+    ]
 }
